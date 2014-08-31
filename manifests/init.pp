@@ -37,6 +37,7 @@ class packages {
       'gpg-agent',
       'gpgme',
       'htop-osx',
+      'hub',
       'ipmitool',
       'mutt',
       'mysql',
