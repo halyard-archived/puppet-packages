@@ -1,0 +1,5 @@
+mod 'boxen', '3.6.2', :github_tarball => 'boxen/puppet-boxen'
+mod 'stdlib', '4.3.2', :github_tarball => "puppetlabs/puppetlabs-stdlib"
+mod 'module_data', '0.0.3', :github_tarball => "ripienaar/puppet-module-data"
+mod "homebrew", "1.9.4", :github_tarball => 'boxen/puppet-homebrew'
+mod "brewcask", "0.0.5", :github_tarball => "halyard/puppet-brewcask"
