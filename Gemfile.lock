@@ -80,3 +80,4 @@ PLATFORMS
 
 DEPENDENCIES
   cardboard (~> 2.1)
+  puppet (~> 3.6.2)
