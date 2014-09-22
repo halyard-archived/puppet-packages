@@ -16,6 +16,10 @@ class packages {
     ]:
   }
 
+  exec { 'update formulas':
+    command => 'brew update'
+  }
+
   package {
     [
       'ack',
@@ -67,13 +71,15 @@ class packages {
       'zsh',
       'zsh-completions'
     ]:
+    require => Exec['update formulas']
   }
 
   package { 'mtr':
     install_options => [
       '--build-from-source',
       '--no-gtk+'
-    ]
+    ],
+    require => Exec['update formulas']
   }
 
   file { 'mtr-binary':
@@ -93,7 +99,8 @@ class packages {
     ]:
     require => [
       Homebrew::Tap['halyard/formulae'],
-      Package['halyard/casks/osxfuse']
+      Package['halyard/casks/osxfuse'],
+      Exec['update formulas']
     ]
   }
 
@@ -103,7 +110,10 @@ class packages {
       'homebrew/dupes/grep',
       'homebrew/dupes/screen'
     ]:
-    require => Homebrew::Tap['homebrew/dupes']
+    require => [
+      Homebrew::Tap['homebrew/dupes'],
+      Exec['update formulas']
+    ]
   }
 
   package {
@@ -152,7 +162,8 @@ class packages {
     provider    => 'brewcask',
     require     => [
       Sudoers['brewcask-pkginstaller'],
-      Homebrew::Tap['halyard/casks']
+      Homebrew::Tap['halyard/casks'],
+      Exec['update formulas']
     ]
   }
 
