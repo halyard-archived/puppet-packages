@@ -138,7 +138,7 @@ class packages {
       'halyard/casks/istat-menus',
       'halyard/casks/iterm2-nightly',
       'halyard/casks/lingon-x',
-      'halyard/casks/little-snitch-nightly',
+      #'halyard/casks/little-snitch-nightly',
       'halyard/casks/luxdelux',
       'halyard/casks/navicat-for-mysql',
       'halyard/casks/onepassword-beta',
@@ -154,8 +154,8 @@ class packages {
       'halyard/casks/totalspaces',
       'halyard/casks/transmission',
       'halyard/casks/vagrant',
-      'halyard/casks/virtualbox-ext-pack',
-      'halyard/casks/virtualbox',
+      #'halyard/casks/virtualbox-ext-pack',
+      #'halyard/casks/virtualbox',
       'halyard/casks/vlc',
       'halyard/casks/xee'
     ]:
