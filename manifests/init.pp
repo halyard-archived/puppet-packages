@@ -93,9 +93,9 @@ class packages {
 
   package {
     [
-      'halyard/formulae/encfs',
-      'halyard/formulae/openssh',
-      'halyard/formulae/ipmiutil'
+      'halyard/formulae/encfs-akerl',
+      'halyard/formulae/openssh-akerl',
+      'halyard/formulae/ipmiutil-akerl'
     ]:
     require => [
       Homebrew::Tap['halyard/formulae'],
