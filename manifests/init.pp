@@ -99,7 +99,7 @@ class packages {
     ]:
     require => [
       Homebrew::Tap['halyard/formulae'],
-      Package['halyard/casks/osxfuse'],
+      Package['halyard/casks/osxfuse-halyard'],
       Exec['update formulas']
     ]
   }
