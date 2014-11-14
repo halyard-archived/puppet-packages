@@ -116,6 +116,12 @@ class packages {
     ]
   }
 
+  if $::macosx_productversion_major == '10.9' {
+    $onepassword_pkg = 'onepassword-beta-mavericks-halyard'
+  } else {
+    $onepassword_pkg = 'onepassword-beta-halyard'
+  }
+
   package {
     [
       'airmail-beta-halyard',
@@ -141,7 +147,7 @@ class packages {
       'little-snitch-nightly-halyard',
       'luxdelux-halyard',
       'navicat-for-mysql-halyard',
-      'onepassword-beta-halyard',
+      $onepassword_pkg,
       'openoffice-halyard',
       'osxfuse-halyard',
       'quicklook-json-halyard',
