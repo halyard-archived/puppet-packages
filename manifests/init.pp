@@ -56,7 +56,6 @@ class packages {
       'qrencode',
       'readline',
       'redis',
-      'siege',
       'socat',
       'sqlite',
       'swig',
@@ -94,8 +93,7 @@ class packages {
   package {
     [
       'encfs-halyard',
-      'openssh-halyard',
-      'ipmiutil-halyard'
+      'openssh-halyard'
     ]:
     require => [
       Homebrew::Tap['halyard/formulae'],
