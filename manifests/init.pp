@@ -31,7 +31,6 @@ class packages {
       'ctags',
       'findutils',
       'gawk',
-      'git',
       'gnupg',
       'gnupg2',
       'gnuplot',
