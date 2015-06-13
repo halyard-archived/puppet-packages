@@ -1,8 +1,9 @@
 class packages {
   require homebrew
   require brewcask
+  require sudoers
 
-  sudoers::allowed_commands { 'brewcask-pkginstaller':
+  sudoers::allowed_command { 'brewcask-pkginstaller':
     command          => '/usr/sbin/installer',
     user             => $::boxen_user,
     require_password => false,
