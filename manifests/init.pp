@@ -8,5 +8,8 @@ class packages {
       'halyard/formulae',
       'halyard/casks'
     ]:
+  } ->
+  exec { 'brew upgrade --all':
+    timeout => 0
   }
 }
