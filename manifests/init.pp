@@ -8,6 +8,7 @@ class packages {
     user             => $::boxen_user,
     require_password => false,
     comment          => 'Allow brewcask to use sudo for installer',
+    tags             => ['SETENV'],
     require_exist    => false
   } ->
   homebrew::tap {
