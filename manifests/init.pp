@@ -20,5 +20,8 @@ class packages {
   } ->
   exec { 'brew upgrade --all':
     timeout => 0
+  } ->
+  exec { 'cask_upgrade':
+    timeout => 0
   }
 }
