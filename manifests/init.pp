@@ -22,6 +22,9 @@ class packages {
     timeout => 0
   } ->
   exec { 'cask_upgrade':
-    timeout => 0
+    command  => "sudo -u ${::boxen_user} cask_upgrade",
+    user     => 'root',
+    timeout  => 0,
+    schedule => 'daily'
   }
 }
