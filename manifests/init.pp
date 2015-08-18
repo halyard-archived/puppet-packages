@@ -20,14 +20,15 @@ class packages {
   } ->
   exec { 'brew update':
     schedule => 'daily'
-  } ->
+  } ~>
   exec { 'brew upgrade --all':
-    timeout => 0
-  } ->
+    timeout     => 0,
+    refreshonly => true
+  } ~>
   exec { 'cask_upgrade':
-    command  => "sudo -u ${::boxen_user} cask_upgrade",
-    user     => 'root',
-    timeout  => 0,
-    schedule => 'daily'
+    command     => "sudo -u ${::boxen_user} cask_upgrade",
+    user        => 'root',
+    timeout     => 0,
+    refreshonly => true
   }
 }
