@@ -18,6 +18,9 @@ class packages {
       'halyard/casks'
     ]:
   } ->
+  exec { 'brew update':
+    schedule => 'daily'
+  } ->
   exec { 'brew upgrade --all':
     timeout => 0
   } ->
