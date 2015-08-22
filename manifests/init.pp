@@ -29,6 +29,7 @@ class packages {
     command     => "sudo -u ${::boxen_user} cask_upgrade",
     user        => 'root',
     timeout     => 0,
-    refreshonly => true
+    refreshonly => true,
+    require     => Class['::dotfiles']
   }
 }
