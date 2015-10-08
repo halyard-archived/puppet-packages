@@ -1,6 +1,6 @@
 {
   "name": "halyard-packages",
-  "version": "2.8.6",
+  "version": "0.1.0",
   "author": "Les Aker",
   "license": "MIT",
   "summary": "Configure packages via Boxen",
