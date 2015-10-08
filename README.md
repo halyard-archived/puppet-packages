@@ -1,6 +1,7 @@
 packages
 ==============
 
+[![Puppet Forge](https://img.shields.io/puppetforge/v/halyard/packages.svg)](https://forge.puppetlabs.com/halyard/packages)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 [![Build Status](https://img.shields.io/circleci/project/halyard/puppet-packages.svg)](https://circleci.com/gh/halyard/puppet-packages)
 

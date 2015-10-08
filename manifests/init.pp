@@ -1,3 +1,4 @@
+# Configure taps and automatic upgrades
 class packages {
   require homebrew
   require brewcask
