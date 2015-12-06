@@ -19,16 +19,11 @@ class packages {
       'halyard/casks'
     ]:
   } ->
-  exec { 'brew update':
-    schedule => 'daily'
-  } ~>
-  exec { 'brew upgrade --all':
-    timeout     => 0,
-    refreshonly => true
+  exec { 'brew upgrade':
+    timeout => 0,
+    onlyif  => 'brew update | grep Updated'
   } ~>
   exec { 'cask_upgrade':
-    command     => "sudo -u ${::boxen_user} cask_upgrade",
-    user        => 'root',
     timeout     => 0,
     refreshonly => true,
     require     => Class['::dotfiles']
