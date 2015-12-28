@@ -24,6 +24,7 @@ class packages {
     onlyif  => 'brew update | grep Updated'
   } ~>
   exec { 'cask_upgrade':
+    command     => "sudo -u ${::user} cask_upgrade",
     timeout     => 0,
     refreshonly => true,
     require     => Class['::dotfiles']
