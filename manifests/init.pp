@@ -11,19 +11,19 @@ class packages {
     comment          => 'Allow brewcask to use sudo for installer',
     tags             => ['SETENV'],
     require_exist    => false
-  } ->
-  homebrew::tap {
+  }
+  -> homebrew::tap {
     [
       'homebrew/dupes',
       'halyard/formulae',
       'halyard/casks'
     ]:
-  } ->
-  exec { 'brew upgrade':
+  }
+  -> exec { 'brew upgrade':
     timeout => 0,
     onlyif  => 'brew update | grep Updated'
-  } ~>
-  exec { 'cask_upgrade':
+  }
+  ~> exec { 'cask_upgrade':
     command     => "sudo -u ${::user} cask_upgrade",
     timeout     => 0,
     refreshonly => true,
